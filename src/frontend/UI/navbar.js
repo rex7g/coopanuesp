@@ -1,22 +1,23 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
+import {Logo} from './logo.png'
+import { BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 
 export class navbar extends Component {
     render() {
         return (
-            <div className="navbar">
-            <div className="leftSide">
-              <img src={Logo} alt="logo"/>
-            
-            </div>
-            <div className="rightSide">
-                <Link to="/home">Home </Link>
-                <Link to="/multimedia">Multimedia </Link>
-                <Link to="/contactos">Contactos </Link>
-                <Link to="/login">Acceder </Link>
-            </div>
-            
-          </div>
+           <Router>
+               <Switch>
+                   <Route exact path="/"component={Homepage}/>
+                   <Route exact path="/login"component={Login}/>
+                   <Route exact path="/Registro"component={Registro}/>
+                   <Route exact path="/Cuenta"component={Cuenta}/>
+                   <Route exact path="/admmin/Inventario"component={Iventario}/>
+                   <Route exact path="/admin/users"component={Usuarios}/>
+                   <Route exact path="*"component={NotFoundpage}/>
+                 
+               </Switch>
+           </Router>
         )
     }
 }

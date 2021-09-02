@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function StickyFooter() {
+export default function footer() {
   const classes = useStyles();
 
   return (
@@ -30,7 +30,7 @@ export default function StickyFooter() {
       <CssBaseline />
       <Container component="main" className={classes.main} maxWidth="sm">
         <Typography variant="h2" component="h1" gutterBottom>
-          Sticky footer
+            Coopanuesp
         </Typography>
         <Typography variant="h5" component="h2" gutterBottom>
           {'Pin a footer to the bottom of the viewport.'}
